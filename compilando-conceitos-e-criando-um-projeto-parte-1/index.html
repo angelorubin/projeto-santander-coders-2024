@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,27 +14,28 @@
     <title>Compilando conceitos e criando um projeto (Parte I)</title>
   </head>
   <body>
-    <div class="main-container">
-      <div class="home">
-        <div class="home-logo-container">
-          <img src="./assets/images/hero.svg" height="100" alt="left-arrow" />
-          <h3>We Form</h3>
+    <div class="home">
+      <div class="home__logo">
+        <img src="./assets/images/hero.svg" height="100" alt="left-arrow" />
+        <h3>We Form</h3>
+      </div>
+      <div class="home__main">
+        <div class="">
+          <img src="" alt="" />
+          <h5>
+            Cadastre sua entidade <span>entidade</span> ou acesse dados de
+            parceiras
+          </h5>
         </div>
-        <div class="home-main-container">
-          <div class="">
-            <img src="" alt="" />
-            <h5>
-              Cadastre sua entidade <span>entidade</span> ou acesse dados de
-              parceiras
-            </h5>
-          </div>
-          <div class="">
-            <button>Cadastrar entidade</button>
-            <button>Ver entidades cadastradas</button>
-          </div>
+        <div class="button-container">
+          <button class="home-button home-button--register-entity">
+            Cadastrar entidade
+          </button>
+          <button class="home-button home-button--show-entity">
+            Ver entidades cadastradas
+          </button>
         </div>
       </div>
-      <div class="box-2">Box 2</div>
     </div>
   </body>
 </html>

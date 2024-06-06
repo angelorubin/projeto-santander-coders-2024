@@ -1,31 +1,53 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+.home {
+  display: flex;
+  height: 100vh;
 }
 
-.main-container {
+.home__logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  height: 100vh;
+  gap: 0.5rem;
+  flex: 1;
 }
 
-.home {
+.home__main {
   display: flex;
-  gap: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  box-shadow: inset;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
+  border: 1px solid gray;
+}
+
+.home-button {
+  border: none;
+}
+
+.home-button--register-entity {
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: #37e5e9;
+}
+
+.home-button--show-entity {
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: #fd567d;
 }
 
 .home-logo-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
