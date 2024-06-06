@@ -1,0 +1,22 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: lightgray;
+  height: 100vh;
+}
+
+.register {
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: inset;
+}
