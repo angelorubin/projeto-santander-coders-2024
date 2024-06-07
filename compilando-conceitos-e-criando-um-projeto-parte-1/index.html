@@ -14,28 +14,36 @@
     <title>Compilando conceitos e criando um projeto (Parte I)</title>
   </head>
   <body>
-    <div class="home">
-      <div class="home__logo">
-        <img src="./assets/images/hero.svg" height="100" alt="left-arrow" />
-        <h3>We Form</h3>
-      </div>
-      <div class="home__main">
-        <div class="">
-          <img src="" alt="" />
-          <h5>
-            Cadastre sua entidade <span>entidade</span> ou acesse dados de
-            parceiras
+    <div class="home-box">
+      <aside class="aside">
+        <img
+          class="aside__hero"
+          src="./assets/images/hero.svg"
+          height="200"
+          alt="hero"
+        />
+        <h3 class="aside__text">
+          <span class="aside__text--pink">We</span> Form
+        </h3>
+      </aside>
+      <main class="main">
+        <div class="main__container">
+          <h5 class="main__text">
+            Cadastre sua
+            <span class="main__text--pink">entidade</span>
+            ou acesse dados
+            <span class="main__text--pink">de parceiras</span>
           </h5>
-        </div>
-        <div class="button-container">
-          <button class="home-button home-button--register-entity">
+
+          <button class="main__button--register-entity">
             Cadastrar entidade
           </button>
-          <button class="home-button home-button--show-entity">
+
+          <button class="main__button--show-entity">
             Ver entidades cadastradas
           </button>
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>
