@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 62.5%;
+  --primary: #36e5e9;
+  --secondary: #fd567d;
+}
+
+.register-box {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-box__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid red;
+}
+
+.register-box__aside-hero {
+  height: 20rem;
+}
+
+.register-box__aside-slogan {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.register-box__aside-slogan--pink {
+  color: var(--secondary);
+}
+
+.register-box__main {
+  flex: 1;
+}
+
+.fa-chevron-left-icon {
+  width: 1rem;
+}
