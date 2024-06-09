@@ -9,41 +9,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <title>Compilando conceitos e criando um projeto (Parte I)</title>
   </head>
   <body>
-    <div class="home-box">
-      <aside class="aside">
-        <img
-          class="aside__hero"
-          src="./assets/images/hero.svg"
-          height="200"
-          alt="hero"
-        />
-        <h3 class="aside__text">
-          <span class="aside__text--pink">We</span> Form
-        </h3>
-      </aside>
-      <main class="main">
-        <div class="main__container">
-          <h5 class="main__text">
-            Cadastre sua
-            <span class="main__text--pink">entidade</span>
-            ou acesse dados
-            <span class="main__text--pink">de parceiras</span>
-          </h5>
+    <div class="home">
+      <div class="home-box">
+        <aside class="aside">
+          <img
+            class="aside__hero"
+            src="./assets/images/hero.svg"
+            height="200"
+            alt="hero" />
+          <h3 class="aside__text">
+            <span class="aside__text--pink">We</span> Form
+          </h3>
+        </aside>
 
-          <button class="main__button--register-entity">
-            Cadastrar entidade
-          </button>
+        <main class="main">
+          <div class="main__container">
+            <div class="main__header">
+              <h5 class="main__text">
+                Cadastre sua
+                <span class="main__text--pink">entidade</span>
+                ou acesse dados
+                <span class="main__text--pink">de parceiras</span>
+              </h5>
 
-          <button class="main__button--show-entity">
-            Ver entidades cadastradas
-          </button>
-        </div>
-      </main>
+              <a href="#" class="main__link--register-entity">
+                Cadastrar entidade
+              </a>
+
+              <a href="#" class="main__link--show-entity">
+                Ver entidades cadastradas
+              </a>
+            </div>
+
+            <div class="main__footer">
+              <p class="main__text--question">
+                Sua entidade não se enquadra nos campos de atuação disponíveis?
+              </p>
+
+              <a class="main__link--register-new-field" href="#"
+                >Registrar novo campo de atuação</a
+              >
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   </body>
 </html>

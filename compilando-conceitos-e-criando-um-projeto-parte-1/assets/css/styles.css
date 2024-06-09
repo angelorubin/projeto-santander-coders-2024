@@ -1,25 +1,39 @@
-.home-box {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary: #36e5e9;
+  --secondary: #fd567d;
+}
+
+.home {
   display: flex;
-  flex-direction: row;
   height: 100vh;
 }
 
+.home-box {
+  display: flex;
+  flex: 1;
+}
+
 @media (max-width: 600px) {
-  .home-box {
-    display: flex;
-    flex-direction: column;
+  .home {
+    align-items: center;
   }
 
-  .aside {
-    display: flex;
+  .home-box {
     align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    flex: 1;
+    margin: 1rem;
+    display: block;
   }
 
   .main {
-    border: 1px solid red;
+    margin-top: 3rem;
   }
 }
 
@@ -32,30 +46,28 @@
 }
 
 .aside__hero {
-  width: 250px;
+  height: 25rem;
 }
 
 .aside__text {
   font-family: Roboto, sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 .aside__text--pink {
   font-family: Roboto, sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: #fd567d;
 }
 
 .main {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  flex-direction: column;
+  flex: 1;
 }
 
 .main__container {
@@ -65,32 +77,45 @@
   border: 1px solid #ccc;
   padding: 2rem;
   border-radius: 0.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .main__text {
   font-family: Roboto, sans-serif;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.5rem;
 }
 
-.main__button--register-entity {
-  padding: 0.7rem;
+.main__text--pink {
+  color: #fd567d;
+  font-weight: bold;
+}
+
+.main__link--register-entity {
+  padding: 1rem;
   border-radius: 0.3rem;
   color: black;
-  background-color: #36e5e9;
+  background-color: var(--primary);
   width: 100%;
   border: none;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-align: center;
 }
 
-.main__button--show-entity {
-  padding: 0.7rem;
+.main__link--show-entity {
+  padding: 1rem;
   border-radius: 0.3rem;
-  color: white;
+  color: black;
   background-color: #fd567d;
   width: 100%;
   border: none;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-align: center;
 }
 
 .entity__container {
@@ -98,13 +123,30 @@
   width: 90%;
 }
 
-.main__text--blue {
+.main__text--question {
   font-family: Roboto, sans-serif;
-  font-weight: bold;
+  text-align: center;
   font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.8rem;
 }
 
-.main__text--pink {
-  color: #fd567d;
-  font-weight: bold;
+.main__link--register-new-field {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
