@@ -1,7 +1,12 @@
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 .home-box {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
+  flex-direction: column;
 }
 
 @media (max-width: 600px) {
@@ -11,15 +16,9 @@
   }
 
   .aside {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    flex: 1;
   }
 
   .main {
-    border: 1px solid red;
   }
 }
 
@@ -27,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   flex: 1;
 }
 
