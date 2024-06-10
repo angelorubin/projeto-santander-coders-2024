@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary: #36e5e9;
+  --secondary: #fd567d;
+}
+
+@media (max-width: 600px) {
+  .home {
+    align-items: center;
+  }
+
+  .home__box {
+    flex-direction: column;
+  }
+
+  .main {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home__box {
+  display: flex;
+}
+
+.aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.aside__hero {
+  height: 25rem;
+}
+
+.aside__text {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.aside__text--pink {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: #fd567d;
+}
+
+.main {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.main__text {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.main__text--pink {
+  color: #fd567d;
+  font-weight: bold;
+}
+
+.main__link--register-entity {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: black;
+  background-color: var(--primary);
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+.main__link--show-entity {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: black;
+  background-color: #fd567d;
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+.entity__container {
+  display: flex;
+  width: 90%;
+}
+
+.main__text--question {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.8rem;
+}
+
+.main__link--register-new-field {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
