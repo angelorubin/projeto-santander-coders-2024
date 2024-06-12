@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-todo-list',
+  selector: 'todo-list',
   standalone: true,
   imports: [],
   templateUrl: './todo-list.component.html',
@@ -10,9 +10,13 @@ import { Component } from '@angular/core';
 
 export class TodoListComponent {
   name = 'angelo'
+
   constructor() { }
 
-  sum(n1: string, n2: string) {
-    return n1 + n2
+  handleClickButton(event: any) {
+    const name = event.currentTarget.name
+    if (name === 'btn1') {
+      console.log('btn1 clicado')
+    }
   }
 }
