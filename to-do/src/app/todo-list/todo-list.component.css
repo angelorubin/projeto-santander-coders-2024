@@ -1,9 +1,0 @@
-.todo-box {
-  display: flex;
-  height: 100vh;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-}
