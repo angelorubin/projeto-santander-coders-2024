@@ -11,10 +11,7 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  // Método para obter todos os usuários
   getUsers() {
-    this.http.get(this.apiUrl).subscribe(dados => {
-      console.log(dados);
-    });
+    return this.http.get(this.apiUrl)
   }
 }

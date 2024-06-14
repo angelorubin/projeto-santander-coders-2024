@@ -1,3 +1,7 @@
 <h1>Component Home</h1>
 <app-banner [image]="image" (onClick)="getResult($event)"></app-banner>
 <p>{{ result }}</p>
+
+<p class="users" *ngFor="let user of users">
+  {{ user }}
+</p>

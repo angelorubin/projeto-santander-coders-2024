@@ -14,14 +14,17 @@ import { ListService } from './list.service';
 export class HomeComponent {
   image: string = '/assets/images/example.jpg';
   result!: string;
+  users!: any
 
   constructor(private listService: ListService) { }
 
-  getResult(value: string) {
-    this.result = value;
+  ngOnInit() {
+    this.listService.getUsers().subscribe(data => {
+      this.users = data
+    })
   }
 
-  public getUsers() {
-    return this.listService.getUsers();
+  getResult(value: string) {
+    this.result = value;
   }
 }
