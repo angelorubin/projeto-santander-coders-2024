@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
+import { ListService } from './list.service';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +8,20 @@ import { BannerComponent } from './banner/banner.component';
   imports: [BannerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  providers: [ListService]
 })
+
 export class HomeComponent {
-  image: string = '/assets/images/example.jpg'; // Defina o caminho da imagem
+  image: string = '/assets/images/example.jpg';
   result!: string;
 
-  constructor() {}
+  constructor(private listService: ListService) { }
 
   getResult(value: string) {
     this.result = value;
-    return this.result;
+  }
+
+  public getUsers() {
+    return this.listService.getUsers();
   }
 }
