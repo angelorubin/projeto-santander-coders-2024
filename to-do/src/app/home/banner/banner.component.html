@@ -1,2 +1,7 @@
 <p>banner works!</p>
-{{ imagePath }}
+<img
+  [src]="image"
+  alt="my-image"
+  width="100"
+  (click)="onClick.emit('Você clicou na imagem')"
+/>

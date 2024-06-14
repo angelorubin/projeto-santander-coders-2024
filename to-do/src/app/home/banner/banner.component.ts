@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
   imports: [],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  styleUrl: './banner.component.css',
 })
-
 export class BannerComponent {
-  @Input() imagePath: string = ''
+  @Output() onClick: EventEmitter<any> = new EventEmitter();
+  @Input() image!: string;
 }

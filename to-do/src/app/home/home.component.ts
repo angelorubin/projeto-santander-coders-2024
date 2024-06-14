@@ -6,9 +6,16 @@ import { BannerComponent } from './banner/banner.component';
   standalone: true,
   imports: [BannerComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-
 export class HomeComponent {
-  imagePath: string = './';  // Defina o caminho da imagem
+  image: string = '/assets/images/example.jpg'; // Defina o caminho da imagem
+  result!: string;
+
+  constructor() {}
+
+  getResult(value: string) {
+    this.result = value;
+    return this.result;
+  }
 }
