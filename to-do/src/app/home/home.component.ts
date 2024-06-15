@@ -11,10 +11,10 @@ import { ListService } from './list.service';
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   image: string = '/assets/images/example.jpg';
   result!: string;
-  users: any = [{ name: 'angelo' }]
+  users!: any;
 
 
   constructor(private listService: ListService) { }
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   getUsersFromService() {
-    this.listService.getUsers().subscribe((result) => {
+    this.listService.getUsers().subscribe((result: any) => {
       this.users = result;
     });
   }
