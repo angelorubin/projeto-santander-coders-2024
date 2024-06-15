@@ -1,27 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { ListService } from './list.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BannerComponent],
+  imports: [BannerComponent, HomeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  providers: [ListService]
 })
-
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   image: string = '/assets/images/example.jpg';
   result!: string;
-  users!: any
+  users!: any;
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService) {}
 
   ngOnInit() {
-    this.listService.getUsers().subscribe(data => {
-      this.users = data
-    })
+    this.getUsersFromService();
+  }
+
+  getUsersFromService() {
+    this.listService.getUsers().subscribe((result) => {
+      console.log(result);
+      this.users = result;
+    });
   }
 
   getResult(value: string) {
