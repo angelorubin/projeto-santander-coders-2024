@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
 import { ListService } from './list.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,23 +11,19 @@ import { ListService } from './list.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-
 export class HomeComponent {
   image: string = '/assets/images/example.jpg';
   result!: string;
-  users!: any;
+  users$!: Observable<any>;
 
-
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService) {}
 
   ngOnInit() {
     this.getUsersFromService();
   }
 
   getUsersFromService() {
-    this.listService.getUsers().subscribe((result: any) => {
-      this.users = result;
-    });
+    this.users$ = this.listService.getUsers();
   }
 
   getResult(value: string) {

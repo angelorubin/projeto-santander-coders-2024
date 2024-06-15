@@ -2,4 +2,6 @@
 <app-banner [image]="image" (onClick)="getResult($event)"></app-banner>
 <p>{{ result }}</p>
 
-<p *ngFor="let user of users">{{ user.name }}</p>
+<p *ngFor="let user of users$ | async">
+  {{ user.name }}
+</p>
