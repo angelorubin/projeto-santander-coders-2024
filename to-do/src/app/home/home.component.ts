@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
 import { ListService } from './list.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BannerComponent, HomeComponent],
+  imports: [CommonModule, BannerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
+
 export class HomeComponent implements OnInit {
   image: string = '/assets/images/example.jpg';
   result!: string;
-  users!: any;
+  users: any = [{ name: 'angelo' }]
 
-  constructor(private listService: ListService) {}
+
+  constructor(private listService: ListService) { }
 
   ngOnInit() {
     this.getUsersFromService();
@@ -22,7 +25,6 @@ export class HomeComponent implements OnInit {
 
   getUsersFromService() {
     this.listService.getUsers().subscribe((result) => {
-      console.log(result);
       this.users = result;
     });
   }

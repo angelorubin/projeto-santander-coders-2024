@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common'; // Importando o CommonModule
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -8,9 +8,9 @@ import { HomeComponent } from './home/home.component';
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
-    CommonModule, // Certifique-se de que CommonModule está aqui
+    CommonModule
   ],
-  providers: [|HomeComponent],
+  providers: [HomeComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

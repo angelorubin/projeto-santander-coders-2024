@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 
 export class ListService {
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+  private apiUrl = 'https://jsonplaceholder.typicode.com/';
 
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get(this.apiUrl)
+    return this.http.get(`${this.apiUrl}/users`)
   }
 }
