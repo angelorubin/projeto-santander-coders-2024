@@ -9,7 +9,8 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent,
+    loadChildren: () =>
+      import('./about/about.module').then((module) => module.AboutModule),
   },
   {
     path: '',
